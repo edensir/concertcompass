@@ -6,10 +6,13 @@ import { GoogleAuth } from 'google-auth-library';
 import { google } from 'googleapis';
 import fetch from 'node-fetch';
 
-dotenv.config();
-
+require('dotenv').config();
 const app = express();
+const connection = require('./db');
+
 const port = process.env.PORT || 3000;
+
+connection()
 
 // Middleware
 app.use(cors());
