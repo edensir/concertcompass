@@ -10,7 +10,7 @@ const express = require('express');
 const connection = require('./db');
 const app = express();
 
-connection()
+connection();
 
 const port = process.env.PORT || 3000;
 // Start server
